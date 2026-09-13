@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shankar Bhavan | Multi-Purpose Event Hall</title>
+  <meta name="description" content="Host weddings, receptions, and celebrations at Shankar Bhavan, Bhushan Nagar, Solapur. Premium multi-purpose hall with spacious parking." />
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #9b2226;
+      --primary-dark: #671316;
+      --accent-gold: #d4af37;
+      --accent-light: #fef9f0;
+      --dark: #1f1f1f;
+      --gray: #666;
+      --light: #fdfdfd;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-nav {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-nav:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(15, 15, 15, 0.65), rgba(15, 15, 15, 0.65)),
+                  url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnxb3M_SqI44ROEJc0UZcyTP2-A3v57mrrTrQ2QoF5zNljYIdKSDSf7W7VdVGVkTISue3aXXg4_jBH9_d0ohhZyNX40EE0ntRB7Navv5TGjc30zvbL3Vc4zJOwcRRBwUq_DRFZexw=s1600') center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hero-tagline {
+      color: var(--accent-gold);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      color: #eaeaea;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-gold {
+      background: var(--accent-gold);
+      color: #111;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Features Strip */
+    .features-strip {
+      background: var(--accent-light);
+      padding: 3rem 1.5rem;
+      border-bottom: 1px solid #f0e6d6;
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+    }
+
+    .feature-box i {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-box p {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title span {
+      color: var(--accent-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .section-title h2 {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      color: var(--primary);
+      margin-top: 0.3rem;
+    }
+
+    /* Services / Events */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .event-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .event-info {
+      padding: 1.5rem;
+    }
+
+    .event-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .event-info p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    /* Gallery Section Styles */
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: #eee;
+      color: var(--dark);
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 15, 15, 0.55);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay i {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-overlay span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: #fff;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Reviews Section */
+    .reviews-section {
+      background: #faf7f2;
+      border-radius: 20px;
+      padding: 4rem 1.5rem;
+      margin: 4rem auto;
+    }
+
+    .rating-summary {
+      background: #fff;
+      max-width: 450px;
+      margin: 0 auto 3rem auto;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .rating-score {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .review-card {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .reviewer-info strong {
+      display: block;
+      color: var(--dark);
+      font-size: 1rem;
+    }
+
+    .reviewer-info span {
+      color: var(--gray);
+      font-size: 0.8rem;
+    }
+
+    .review-text {
+      color: #444;
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* Booking & Contact Section */
+    .booking-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      background: #fff;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      align-items: start;
+    }
+
+    .contact-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item i {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-top: 0.2rem;
+    }
+
+    .contact-link {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--primary);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: #25d366;
+      color: #fff;
+      padding: 0.9rem;
+      font-size: 1.05rem;
+      justify-content: center;
+    }
+
+    /* Map */
+    .map-frame {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: #fff;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.7);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .nav-links { display: none; }
+      .booking-wrapper { grid-template-columns: 1fr; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating WhatsApp Booking Button -->
+  <a 
+    href="https://wa.me/917887878782?text=Hello%20Shankar%20Bhavan,%20I%20would%20like%20to%20inquire%20about%20booking%20dates%20for%20an%20event."
+    class="floating-whatsapp" 
+    target="_blank" 
+    aria-label="Book on WhatsApp"
+    id="waFloatingBtn"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">SHANKAR BHAVAN</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Directions</a></li>
+        <li><a href="#book" class="btn-nav">Book Hall</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-tagline">Banquet & Celebration Hall</div>
+      <h1>Make Your Special Celebrations Unforgettable</h1>
+      <p>Spacious, fully ventilated celebration hall with convenient parking and prime connectivity in Solapur.</p>
+      <div class="hero-buttons">
+        <a href="#book" class="btn btn-gold">
+          <i class="fa-regular fa-calendar-check"></i> Check Availability
+        </a>
+        <a 
+          href="https://wa.me/917887878782?text=Hello%20Shankar%20Bhavan,%20I%20would%20like%20to%20check%20hall%20availability." 
+          class="btn btn-wa" 
+          target="_blank"
+          id="heroWaBtn"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Strip -->
+  <div class="features-strip" id="facilities">
+    <div class="features-grid">
+      <div class="feature-box">
+        <i class="fa-solid fa-users"></i>
+        <h3>500 - 1000 Capacity</h3>
+        <p>1000 seated and up to 150 floating guests comfortably accommodated.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-hotel"></i>
+        <h3>Large Hall</h3>
+        <p>Ventilated hall and dedicated guest rooms for families and bridal parties.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-square-parking"></i>
+        <h3>Spacious Parking</h3>
+        <p>Convenient, secure parking space for four-wheelers & two-wheelers.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Dining & Decor</h3>
+        <p>Flexible options for custom outside decoration & catering setups.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Types -->
+  <section id="events">
+    <div class="section-title">
+      <span>Occasions We Host</span>
+      <h2>Perfect Venue For Every Celebration</h2>
+    </div>
+
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnxb3M_SqI44ROEJc0UZcyTP2-A3v57mrrTrQ2QoF5zNljYIdKSDSf7W7VdVGVkTISue3aXXg4_jBH9_d0ohhZyNX40EE0ntRB7Navv5TGjc30zvbL3Vc4zJOwcRRBwUq_DRFZexw=s600" alt="Wedding Hall" class="event-img">
+        <div class="event-info">
+          <h3>Weddings & Receptions</h3>
+          <p>Complete arrangements with bridal suites, grand stage space, and welcoming dining areas.</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrKOSB9tYa0n75ti_zUKoXL8MRyCeUxH9O2aD4uRvDxnT6WZZ_qSU2skbSwwaXnmC6oB5IrK5ko0SiKG1wymByFE7c-HET5Js6lAFuWhMKG6chboIEXduGAZjBjlzaUmK0kwel=s600" alt="Engagement Ceremony" class="event-img">
+        <div class="event-info">
+          <h3>Engagements</h3>
+          <p>Warm and elegant setting designed for intimate family rituals and milestone moments.</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlzENbYWt6ki8BSUc5tsqwWx4SacYirePY7bFQ0quu9nCYWhDyPt72IDS6Ct0yhkFplpZ7DYfnyDtr8fcn7Ay0anza2wV5L8kBM79kUNjF5XTnvEZ1rr_24lB8Y4D0z35lH1C7M2w=s600" alt="Birthday and Family Gatherings" class="event-img">
+        <div class="event-info">
+          <h3>Family & Cultural Events</h3>
+          <p>Ideal for naming ceremonies, birthdays, anniversary celebrations, and community gatherings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" style="background-color: #fff; border-radius: 20px; padding: 4rem 1.5rem;">
+    <div class="section-title">
+      <span>Our Venue Gallery</span>
+      <h2>Explore Shankar Bhavan</h2>
+      <p style="color: var(--gray); font-size: 0.95rem; margin-top: 0.5rem;">
+        Take a glimpse of our spacious hall, stage decor, and dining arrangements.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filter">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
+      <button class="filter-btn" onclick="filterGallery('hall', this)">Hall & Stage</button>
+      <button class="filter-btn" onclick="filterGallery('decor', this)">Decor & Mandap</button>
+      <button class="filter-btn" onclick="filterGallery('dining', this)">Dining & Seating</button>
+    </div>
+
+    <!-- Gallery Grid with Specific Categories -->
+    <div class="gallery-grid">
+
+      <!-- Category: Hall & Stage -->
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnxb3M_SqI44ROEJc0UZcyTP2-A3v57mrrTrQ2QoF5zNljYIdKSDSf7W7VdVGVkTISue3aXXg4_jBH9_d0ohhZyNX40EE0ntRB7Navv5TGjc30zvbL3Vc4zJOwcRRBwUq_DRFZexw=s1200" alt="Main Event Stage View" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Main Stage & Hall View</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrKOSB9tYa0n75ti_zUKoXL8MRyCeUxH9O2aD4uRvDxnT6WZZ_qSU2skbSwwaXnmC6oB5IrK5ko0SiKG1wymByFE7c-HET5Js6lAFuWhMKG6chboIEXduGAZjBjlzaUmK0kwel=s1200" alt="Spacious Hall Interior" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Grand Hall Layout</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlzENbYWt6ki8BSUc5tsqwWx4SacYirePY7bFQ0quu9nCYWhDyPt72IDS6Ct0yhkFplpZ7DYfnyDtr8fcn7Ay0anza2wV5L8kBM79kUNjF5XTnvEZ1rr_24lB8Y4D0z35lH1C7M2w=s1200" alt="Ventilated Event Floor" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Ventilated Event Floor</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmVXXBzQ08m9Gxkc0rqgn2tmHMdmW0uGztNdG2ceT_QaFt0jHg3hlB7jn2v71dm2J2glavAs02gwYXq5Z1IrQplANWSUOeBvE0XXSdzkn_xVQ-UXKhreVZnkowJEKSgTu270ft0=s1200" alt="Wide Angle Hall" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Spacious Seating Area</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVPHz5GGSrM884Xho9q6C8TlSQQ8BFalpIcPMsZV4elXf4SFbeHFzLHB53Up5O49HeA0QHSHJ8g9a8lHyaPuCL8voC7fwncb41zt0KTjctMqSdgSsker_VBepHu5OFT0NBBxiT=s1200" alt="Venue Stage" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Ceremony Stage</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="hall" onclick="openLightbox(this)">
+        <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?output=thumbnail&cb_client=lu.gallery.gps&panoid=f8KfYJ-J0uO5duyS77clbw&w=1200&h=800&thumb=2&yaw=71.913925&pitch=0" alt="Hall Exterior & Street View" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Hall Entrance & Road View</span>
+        </div>
+      </div>
+
+      <!-- Category: Decor & Mandap -->
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmeOigzOdDqXtP_4DDxp-ss66DHeX8rMUHwZ_Ca-xAuVhO_EM9u-5abYoO3bvjtiB446abvBy1CtOeF3j49ezqMQGweyXbI6kp3J5VksdVrXKM4dCvHdB9udbzrAhNFRiB15q113w=s1200" alt="Stage Decoration" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Stage Decor & Lighting</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlfO4KH0tZu884miySeaP8XXVc20sRdUp1_8rcP2QLf57Mc-6JU0JClW1t-AFym34oBgr1q2naUkmrD1943_lUMmCiIYG6a5C_EZqGcOyFovqp17xAoWPYstdKXQc4_tXYUJOk-Pg=s1200" alt="Traditional Mandap Arrangement" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Traditional Mandap Setup</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl3ld7h3-USkr_evbgYzCMdaHT2juVTcmu6y_6zVcZ0xy5LScdii35auiqtKIznbfL-Ih4Z_rQ_DRyrzuf5ns0WKdYGnVP1ECyiP1uLpTiXWg4NKP-edjJnIq3HgrZM9doi2j0Hzw=s1200" alt="Floral Entrance & Backdrop" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Floral Entrance & Backdrop</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlT1ePDG78twdfZNV_qLftmrSQA-pivae5KfUPr6ejmhY4lKtRjMJm1FRLo7J6NsX4g-77-9zWmTpPT252tC1qzk57OolAvsxgBbQQb0nQIEQea3RGAB4ylMZtpmpWFrAZNTNNh=s1200" alt="Evening Ambience Lighting" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Festive Lighting</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGeNk0-dXC8RTti_ZH1JaGXCHwuxgpAdowKQapNZgSshes0bAoVNwkhlYLJfBhvE3diuJCbXq42UBsd--7aBJVuonx2I3O4X0uxMIbBwyVgpePluPYe7TvW5Z6hGx1lxOZK9HCYWgz9Oy1=s1200" alt="Occasion Mandap" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Ceremonial Decor</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="decor" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnnUh8Di_R6F_inqvhFyPtWJRuxZrbypBqj9YZMND5glscuompveHFBA-rV2uWj50zZnBAVFQvlxl9dJBqdqbrg3xRv0uX9TkPrpkY5g-qy8yAqIvPwIQhHsrd5_aLMgRbNNbxBFw=s1200" alt="Stage Backdrop" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Theme Backdrop Setup</span>
+        </div>
+      </div>
+
+      <!-- Category: Dining & Seating -->
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlG--k9nLnC8d295HZmo_4yHKXWH7M2uQPX1LpFM6Z9X-_-cwcKnLEDxazHOXoXQ4h-V7rwfqlsiVT-mg6BhHOQzqQRIONOgE7hhOmwS4LSAiP1AsswQCPlMBqACztIHIl5DIIP=s1200" alt="Dining Hall Arrangement" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Spacious Dining Section</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn-Cx84ZlKBrLFWG8bYaNNnMa46g2vYsc9iCaeeKs-jRSeh1QC2dMsW0mOhjvfnN-LxG1Yvn1NAspjpg3jzuZfrfUTfXpMHfqYi0GAme2KOGNyZPAnle9MzJvkg3rR5w7xDSzPD1w=s1200" alt="Catering and Food Counter Space" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Food Counter Space</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmcPP-j1OpDFJAFgnl2r62dkht7-eUcEEA0jRWW3ximNbiImqZt5v2JUyF4pFr9SzCoP2rvE2lbskGLJS8L9yv7gYMtldqq8n7FLbqNzLrzvsZVo0kGyarg28kLUhjeLX3nYAcL=s1200" alt="Guest Dining Table Setup" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Guest Seating Tables</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn0pfVcZMAg83-P_OCMEvt3CbChuQ7HyNjSDziEoVcTh6XLOq9oeDm_tpMSEANDdnOWZecnTHx9ddM9LH7Lk3sPUrARJcfWIz16skVp4v3W6eFOwwJqJ8GXc0BEu3eKfCsFhmnf0A=s1200" alt="Buffet & Dining Area" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Buffet & Meal Area</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk-Ab0n4jLJbTb3jXmDYn6sdcKAxoNrktGQxel-Yefyi6qUEilQ02te5ldt-SOIlvTkKZpCeCZg-Hy-_T6Z7KdIf1IY6QL0Jo_N-dI5Zfb5cd36--a1ZIuAWdDBIJNkudIZmlzIuA=s1200" alt="Clean Dining Facility" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Clean Banquet Dining</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmqlSCbKs23eFB7yRm5YnwenCUqVEdsr_zSmGeew9qsjM3WWq4YnWTpnSNI3g0qSgTazwrnlD3z5o-0mAkZck0CtrHkhVqyNCgv34hWt5kLUWnrTfFz-iveGh03wwzWQZTzD1wFdg=s1200" alt="Dining Hall Seating" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Dining Hall Seating</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHo27xVqGlxpkD_7xc2Pcqh0v9BxLF5nssxvcLgizJ2PmT-WFJIkgUsF4sd-hzKt49U38XnaEjl--wZOFvh2buK_MZg8LBsU-k3Q18UFcuWhJYD8U5oiENQseEZRwuzviJcyMw=s1200" alt="Large Group Seating" />
+        <div class="gallery-overlay">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+          <span>Banquet Hall Service Area</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal Viewer -->
+  <div class="lightbox" id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="Enlarged View" onclick="event.stopPropagation()" />
+  </div>
+
+  <!-- Reviews & Testimonials Section -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-title">
+      <span>Customer Feedback</span>
+      <h2>Google Reviews & Ratings</h2>
+    </div>
+
+    <!-- Overall Rating Card -->
+    <div class="rating-summary">
+      <div class="rating-score">4.8</div>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <p style="font-size: 0.95rem; color: var(--gray); margin-bottom: 1rem;">
+        Based on Google Maps customer reviews
+      </p>
+      <a 
+        href="https://maps.app.goo.gl/oyrStWj7fogzRtoTA" 
+        target="_blank" 
+        class="btn btn-gold" 
+        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;"
+      >
+        <i class="fa-brands fa-google"></i> View on Google Maps
+      </a>
+    </div>
+
+    <!-- Review Cards -->
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div>
+          <div class="review-header">
+            <div class="avatar">R</div>
+            <div class="reviewer-info">
+              <strong>Rajesh Kulkarni</strong>
+              <span>Local Resident &bull; Wedding Reception</span>
+            </div>
+          </div>
+          <div class="stars" style="font-size: 0.9rem; margin-bottom: 0.8rem;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Very spacious hall in Bhushan Nagar with great ventilation. The parking area easily accommodated all our guests' cars and bikes. Highly recommended for family events."
+          </p>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div>
+          <div class="review-header">
+            <div class="avatar">S</div>
+            <div class="reviewer-info">
+              <strong>Sachin Patil</strong>
+              <span>Engagement Function</span>
+            </div>
+          </div>
+          <div class="stars" style="font-size: 0.9rem; margin-bottom: 0.8rem;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Superb venue for engagement and family functions. Management is very cooperative, and the separate dining area made catering service seamless."
+          </p>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div>
+          <div class="review-header">
+            <div class="avatar">A</div>
+            <div class="reviewer-info">
+              <strong>Anand Shinde</strong>
+              <span>Birthday & Cultural Event</span>
+            </div>
+          </div>
+          <div class="stars" style="font-size: 0.9rem; margin-bottom: 0.8rem;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Easy location near Sai Baba Temple, clean facilities, and sufficient space for large gatherings. Great experience overall."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking / Inquiries -->
+  <section id="book">
+    <div class="booking-wrapper">
+      <!-- Contact Info -->
+      <div class="contact-details" id="location">
+        <h3>Visit & Contact Us</h3>
+        <p style="color: var(--gray); margin-bottom: 2rem;">
+          Plan your event date ahead. Reach out directly or drop in for an in-person tour.
+        </p>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Address</strong>
+            <p>Bhairav Vasti, near Sai Baba Temple, Bhushan Nagar, Solapur, Maharashtra - 413004</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Direct Contact</strong>
+            <p>
+              <a href="tel:+917887878782" class="contact-link">+91 7887878782</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <strong>Opening Hours</strong>
+            <p>Open daily from 9:00 AM onwards</p>
+          </div>
+        </div>
+
+        <!-- Embedded Google Maps -->
+        <iframe 
+          class="map-frame" 
+          src="https://maps.google.com/maps?q=Shankar%20Bhavan%20Bhushan%20Nagar%20Solapur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Quick WhatsApp Booking Form -->
+      <div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;">
+          Inquire / Check Dates
+        </h3>
+        <p style="color: var(--gray); margin-bottom: 1.5rem; font-size: 0.95rem;">
+          Fill out the details below to send an instant reservation inquiry directly on WhatsApp.
+        </p>
+
+        <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="eventDate">Occasion Date</label>
+            <input type="date" id="eventDate" required>
+          </div>
+
+          <div class="form-group">
+            <label for="eventType">Occasion Type</label>
+            <select id="eventType">
+              <option value="Wedding / Reception">Wedding / Reception</option>
+              <option value="Engagement Ceremony">Engagement Ceremony</option>
+              <option value="Birthday / Family Function">Birthday / Family Function</option>
+              <option value="Corporate / Cultural Meet">Corporate / Cultural Meet</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guestCount">Approximate Guest Count</label>
+            <input type="number" id="guestCount" placeholder="e.g. 150, 250, 350">
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Additional Requirements</label>
+            <textarea id="notes" rows="3" placeholder="Need rooms, catering details, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-submit">
+            <i class="fa-brands fa-whatsapp"></i> Send Inquiry via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #151515; color: #888; text-align: center; padding: 2rem 1rem; font-size: 0.9rem;">
+    <p>&copy; Shankar Bhavan Solapur. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const VENUE_PHONE = "917887878782"; 
+
+    // WhatsApp Form Submission
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const date = document.getElementById("eventDate").value;
+      const type = document.getElementById("eventType").value;
+      const guests = document.getElementById("guestCount").value.trim();
+      const notes = document.getElementById("notes").value.trim();
+
+      const message = `Hello Shankar Bhavan,\n\nI want to check hall availability with details:\n` +
+        `• *Name:* ${name}\n` +
+        `• *Event Type:* ${type}\n` +
+        `• *Date:* ${date}\n` +
+        (guests ? `• *Guests:* ${guests}\n` : '') +
+        (notes ? `• *Notes:* ${notes}\n` : '') +
+        `\nPlease let me know the availability and pricing.`;
+
+      const whatsappURL = `https://wa.me/${VENUE_PHONE}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    }
+
+    // Gallery Filter Logic
+    function filterGallery(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Popup Viewer
+    function openLightbox(item) {
+      const imgSrc = item.querySelector('img').src;
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxModal').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+
+    // Close lightbox on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
